@@ -6,12 +6,14 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private RelativeLayout layout;
+    private LinearLayout linearLayout;
     private Button pluszButton;
     private Button minuszButton;
     private TextView textView;
@@ -115,5 +117,6 @@ public class MainActivity extends AppCompatActivity {
         pluszButton = findViewById(R.id.pluszButton);
         minuszButton = findViewById(R.id.minuszButton);
         textView = findViewById(R.id.textView);
+        linearLayout = findViewById(R.id.linearLayout1);
     }
 }
