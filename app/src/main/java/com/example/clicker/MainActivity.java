@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 num++;
                 if (num==0){
                     textView.setTextColor(Color.rgb(0,0,255));
-                }if (num<0){
+                }else if (num<0){
                     textView.setTextColor(Color.rgb(255,0,0));
                 }else{
                     textView.setTextColor(Color.rgb(0,255,0));
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 num--;
                 if (num==0){
                     textView.setTextColor(Color.rgb(0,0,255));
-                }if (num<0){
+                }else if (num<0){
                     textView.setTextColor(Color.rgb(255,0,0));
                 }else{
                     textView.setTextColor(Color.rgb(0,255,0));
