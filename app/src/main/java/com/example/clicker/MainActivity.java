@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         init();
+        
 
         pluszButton.setOnClickListener(new View.OnClickListener() {
             @Override
