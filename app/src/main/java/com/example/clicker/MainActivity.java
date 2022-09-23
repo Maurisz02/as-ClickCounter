@@ -28,14 +28,30 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int num = Integer.parseInt(textView.getText().toString());
                 num++;
-                if (num==0){
+
+                if(num>0){
+                    if (isPrimeNumber(num)){
+                        textView.setTextColor(Color.rgb(255,255,255));
+                    }else{
+                        textView.setTextColor(Color.rgb(0,255,0));
+                    }
+                }else if (num==0){
                     textView.setTextColor(Color.rgb(0,0,255));
                 }else if (num<0){
                     textView.setTextColor(Color.rgb(255,0,0));
-                }else{
-                    textView.setTextColor(Color.rgb(0,255,0));
                 }
                 textView.setText(String.valueOf(num));
+            }
+
+
+            public boolean isPrimeNumber(int number) {
+
+                for (int i = 2; i <= number / 2; i++) {
+                    if (number % i == 0) {
+                        return false;
+                    }
+                }
+                return true;
             }
         });
 
@@ -44,15 +60,35 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int num = Integer.parseInt(textView.getText().toString());
                 num--;
-                if (num==0){
+
+                if(num>0){
+                    if (isPrimeNumber(num)){
+                        textView.setTextColor(Color.rgb(255,255,255));
+                    }else{
+                        textView.setTextColor(Color.rgb(0,255,0));
+                    }
+                }else if (num==0){
                     textView.setTextColor(Color.rgb(0,0,255));
                 }else if (num<0){
                     textView.setTextColor(Color.rgb(255,0,0));
-                }else{
-                    textView.setTextColor(Color.rgb(0,255,0));
                 }
+
                 textView.setText(String.valueOf(num));
             }
+
+            public boolean isPrimeNumber(int number) {
+
+                for (int i = 2; i <= number / 2; i++) {
+                    if (number % i == 0) {
+                        return false;
+                    }
+                }
+                if(number>0){
+                    return false;
+                }
+                return true;
+            }
+
         });
 
        /* textView.setOnClickListener(new View.OnClickListener() {
