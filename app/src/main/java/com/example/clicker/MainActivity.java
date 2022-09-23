@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int num = Integer.parseInt(textView.getText().toString());
                 num++;
-                textView.setText(num);
+                textView.setText(String.valueOf(num));
             }
         });
 
@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int num = Integer.parseInt(textView.getText().toString());
                 num--;
-                textView.setText(num);
+                textView.setText(String.valueOf(num));
             }
         });
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textView.setText('0');
+                textView.setText(String.valueOf(0));
             }
         });
     }
