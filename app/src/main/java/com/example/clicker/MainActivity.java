@@ -2,6 +2,7 @@ package com.example.clicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int num = Integer.parseInt(textView.getText().toString());
                 num++;
+                if (num==0){
+                    textView.setTextColor(Color.rgb(0,0,255));
+                }if (num<0){
+                    textView.setTextColor(Color.rgb(255,0,0));
+                }else{
+                    textView.setTextColor(Color.rgb(0,255,0));
+                }
                 textView.setText(String.valueOf(num));
             }
         });
@@ -36,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int num = Integer.parseInt(textView.getText().toString());
                 num--;
+                if (num==0){
+                    textView.setTextColor(Color.rgb(0,0,255));
+                }if (num<0){
+                    textView.setTextColor(Color.rgb(255,0,0));
+                }else{
+                    textView.setTextColor(Color.rgb(0,255,0));
+                }
                 textView.setText(String.valueOf(num));
             }
         });
@@ -43,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                textView.setTextColor(Color.rgb(0,0,255));
                 textView.setText(String.valueOf(0));
+
             }
         });
     }
